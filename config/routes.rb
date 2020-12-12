@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   # draw out routes individually
   # index
   get "/posts", to: "posts#index", as: "posts"
-
+  
+  #new
+  get "/posts/new", to: "posts#new", as: "new_post"
+  
   # show
   get "/posts/:id", to: "posts#show", as: "post"
 
-  #new
-  get "/posts/new", to: "posts#new", as: "new_post"
 
   #create - '/posts' already exists --> no need for 'as:'
   post "/posts", to: "posts#create"
